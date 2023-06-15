@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="16dp"
-    tools:context=".MainActivity">
+    tools:context=".applistacurso.view.MainActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -47,7 +47,7 @@
     <Button
         android:id="@+id/button3"
         android:layout_width="361dp"
-        android:layout_height="47dp"
+        android:layout_height="48dp"
         android:layout_margin="16dp"
         android:text="@string/btn_finalizar"
         app:layout_constraintBottom_toBottomOf="parent"
