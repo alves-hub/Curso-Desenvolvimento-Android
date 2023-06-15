@@ -8,5 +8,7 @@
     <string name="txt_hint_name">Name</string>
     <string name="txt_hint_sobrenome">Sobrenome</string>
     <string name="txt_name">Name</string>
+    <string name="nome_do_curso_desejado">Nome do Curso Desejado</string>
+    <string name="telefone_de_contato">Telefone de contato</string>
 
 </resources>

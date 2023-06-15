@@ -28,21 +28,21 @@
         android:text="@string/btn_limpar"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintHorizontal_bias="0.338"
+        app:layout_constraintHorizontal_bias="0.169"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextText17"
-        app:layout_constraintVertical_bias="0.647" />
+        app:layout_constraintVertical_bias="0.426" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="60dp"
+        android:layout_marginEnd="16dp"
         android:text="@string/btn_salvar"
         app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextText17"
-        app:layout_constraintVertical_bias="0.647" />
+        app:layout_constraintVertical_bias="0.426" />
 
     <Button
         android:id="@+id/button3"
@@ -64,7 +64,7 @@
         android:ems="10"
         android:hint="@string/txt_hint_primeiro_nome"
         android:inputType="text"
-        android:text="@string/txt_hint_name"
+        android:text=""
         app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:layout_editor_absoluteX="0dp" />
 
@@ -75,7 +75,7 @@
         android:ems="10"
         android:hint="@string/txt_hint_sobrenome"
         android:inputType="text"
-        android:text="Name"
+        android:text=""
         app:layout_constraintTop_toBottomOf="@+id/editTextText14"
         tools:layout_editor_absoluteX="47dp" />
 
@@ -84,9 +84,9 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:ems="10"
-        android:hint="Nome do Curso Desejadp"
+        android:hint="@string/nome_do_curso_desejado"
         android:inputType="text"
-        android:text="@string/txt_name"
+        android:text=""
         app:layout_constraintTop_toBottomOf="@+id/editTextText15"
         tools:layout_editor_absoluteX="47dp" />
 
@@ -95,9 +95,9 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:ems="10"
-        android:hint="Telefone de contato"
+        android:hint="@string/telefone_de_contato"
         android:inputType="text"
-        android:text="Name"
+        android:text=""
         app:layout_constraintTop_toBottomOf="@+id/editTextText16"
         tools:layout_editor_absoluteX="47dp" />
 
