@@ -45,8 +45,6 @@ public class Pessoa {
     }
 
     //to String - para textos - string de caracteres
-
-
     @Override
     public String toString() {
         return "Pessoa{" +

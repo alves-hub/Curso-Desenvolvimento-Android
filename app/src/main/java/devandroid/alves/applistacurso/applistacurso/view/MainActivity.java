@@ -2,6 +2,8 @@ package devandroid.alves.applistacurso.applistacurso.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+
 import devandroid.alves.applistacurso.R;
 import devandroid.alves.applistacurso.applistacurso.model.Curso;
 import devandroid.alves.applistacurso.applistacurso.model.Pessoa;
@@ -55,7 +57,9 @@ public class MainActivity extends AppCompatActivity {
         dadosOutraPessoa += outraPessoa.getNumeroTelefone();
 
 
-        int parado = 0;
+        Log.i("POOAndroid", pessoa.toString());
+        Log.i("POOAndroid", outraPessoa.toString());
+
 
 
     }
