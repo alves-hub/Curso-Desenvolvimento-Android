@@ -52,24 +52,24 @@ public class MainActivity extends AppCompatActivity {
         outraPessoa.setNumeroTelefone("11-93215-0000");
 
 
-
-        dadosPessoa = " Primeiro Nome: ";
-        dadosPessoa += pessoa.getPrimeiroNome();
-        dadosPessoa += " Sobresnome: ";
-        dadosPessoa += pessoa.getSobreNome();
-        dadosPessoa += " Curso desejado: ";
-        dadosPessoa += pessoa.getCursoDesejado();
-        dadosPessoa += " Telefone de contato: ";
-        dadosPessoa += pessoa.getNumeroTelefone();
-
-        dadosOutraPessoa = " Primeiro Nome: ";
-        dadosOutraPessoa += outraPessoa.getPrimeiroNome();
-        dadosOutraPessoa += " Sobrenome: ";
-        dadosOutraPessoa += outraPessoa.getSobreNome();
-        dadosOutraPessoa += " Curso desejado: ";
-        dadosOutraPessoa += outraPessoa.getCursoDesejado();
-        dadosOutraPessoa += " Telefone de contato: ";
-        dadosOutraPessoa += outraPessoa.getNumeroTelefone();
+//
+//        dadosPessoa = " Primeiro Nome: ";
+//        dadosPessoa += pessoa.getPrimeiroNome();
+//        dadosPessoa += " Sobresnome: ";
+//        dadosPessoa += pessoa.getSobreNome();
+//        dadosPessoa += " Curso desejado: ";
+//        dadosPessoa += pessoa.getCursoDesejado();
+//        dadosPessoa += " Telefone de contato: ";
+//        dadosPessoa += pessoa.getNumeroTelefone();
+//
+//        dadosOutraPessoa = " Primeiro Nome: ";
+//        dadosOutraPessoa += outraPessoa.getPrimeiroNome();
+//        dadosOutraPessoa += " Sobrenome: ";
+//        dadosOutraPessoa += outraPessoa.getSobreNome();
+//        dadosOutraPessoa += " Curso desejado: ";
+//        dadosOutraPessoa += outraPessoa.getCursoDesejado();
+//        dadosOutraPessoa += " Telefone de contato: ";
+//        dadosOutraPessoa += outraPessoa.getNumeroTelefone();
 
         // associando class editText e button ao MainActivity.java
         editTextPrimeiroNome = findViewById(R.id.editTextPrimeiroNome);
