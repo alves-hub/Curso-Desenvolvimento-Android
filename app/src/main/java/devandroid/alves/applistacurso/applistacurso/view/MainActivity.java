@@ -11,11 +11,13 @@ import android.widget.Toast;
 import android.widget.Toolbar;
 
 import devandroid.alves.applistacurso.R;
+import devandroid.alves.applistacurso.applistacurso.controller.PessoaController;
 import devandroid.alves.applistacurso.applistacurso.model.Curso;
 import devandroid.alves.applistacurso.applistacurso.model.Pessoa;
 
 public class MainActivity extends AppCompatActivity {
 
+    PessoaController controller;
     Pessoa pessoa;
     Pessoa outraPessoa;
     EditText editTextPrimeiroNome;
@@ -33,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
 
         pessoa = new Pessoa();
         outraPessoa = new Pessoa();
+        controller = new PessoaController();
+        controller.toString();
+
 
         // Atribuir conteudo, conteúdo dados, valores para o objeto
         pessoa.setPrimeiroNome("Jefferson");
@@ -44,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
         outraPessoa.setSobreNome("Alves");
         outraPessoa.setCursoDesejado("Kotilin");
         outraPessoa.setNumeroTelefone("11-93215-0000");
+
+
 
         // associando class editText e button ao MainActivity.java
         editTextPrimeiroNome = findViewById(R.id.editTextPrimeiroNome);
@@ -89,6 +96,8 @@ public class MainActivity extends AppCompatActivity {
                 pessoa.setCursoDesejado(editTextNomeCursoDesejado.getText().toString());
                 pessoa.setNumeroTelefone(editTextTelefoneDeContato.getText().toString());
                 Toast.makeText(MainActivity.this, "Cadastro Realizado!" + pessoa.toString(), Toast.LENGTH_LONG).show();
+
+            controller.Salvar(pessoa);
             }
         });
 
