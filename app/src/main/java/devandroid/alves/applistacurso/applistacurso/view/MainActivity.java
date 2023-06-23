@@ -2,6 +2,7 @@ package devandroid.alves.applistacurso.applistacurso.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,6 +18,9 @@ import devandroid.alves.applistacurso.applistacurso.model.Pessoa;
 
 public class MainActivity extends AppCompatActivity {
 
+    SharedPreferences preferences;
+    //atributo para salvar o Nome
+    public static final String NAME_PREFERENCES = "pref_listaVip";
     PessoaController controller;
     Pessoa pessoa;
     Pessoa outraPessoa;
@@ -32,6 +36,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Estancia objeto SharedPreferences passando nome criado e 0 = leitura e escrita.
+        preferences = getSharedPreferences(NAME_PREFERENCES,0);
+        //Criando arquivo tendo nome da lista "listaVip e associa ao arquivo no caso "preferences"
+        SharedPreferences.Editor listaVip = preferences.edit();
 
         pessoa = new Pessoa();
         outraPessoa = new Pessoa();
@@ -49,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
         outraPessoa.setSobreNome("Alves");
         outraPessoa.setCursoDesejado("Kotilin");
         outraPessoa.setNumeroTelefone("11-93215-0000");
-
 
 
         // associando class editText e button ao MainActivity.java
@@ -96,6 +104,15 @@ public class MainActivity extends AppCompatActivity {
                 pessoa.setCursoDesejado(editTextNomeCursoDesejado.getText().toString());
                 pessoa.setNumeroTelefone(editTextTelefoneDeContato.getText().toString());
                 Toast.makeText(MainActivity.this, "Cadastro Realizado!" + pessoa.toString(), Toast.LENGTH_LONG).show();
+
+                //associando  dados a lista
+                listaVip.putString("primeiroNome", pessoa.getPrimeiroNome());
+                listaVip.putString("Sobrenome", pessoa.getSobreNome());
+                listaVip.putString("CursoDesejado", pessoa.getCursoDesejado());
+                listaVip.putString("Numtelefone", pessoa.getNumeroTelefone());
+                listaVip.putString("TodosDados", outraPessoa.toString());
+                //salvando no arquivo
+                listaVip.apply();
 
             controller.Salvar(pessoa);
             }
