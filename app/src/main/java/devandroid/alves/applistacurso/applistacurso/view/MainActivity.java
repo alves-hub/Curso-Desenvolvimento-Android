@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
     public static final String NAME_PREFERENCES = "pref_listaVip";
     PessoaController controller;
     Pessoa pessoa;
-    Pessoa outraPessoa;
     EditText editTextPrimeiroNome;
     EditText editTextSobrenome;
     EditText editTextNomeCursoDesejado;
@@ -43,22 +42,13 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences.Editor listaVip = preferences.edit();
 
         pessoa = new Pessoa();
-        outraPessoa = new Pessoa();
         controller = new PessoaController();
         controller.toString();
 
-
-        // Atribuir conteudo, conteúdo dados, valores para o objeto
-        pessoa.setPrimeiroNome("Jefferson");
-        pessoa.setSobreNome("Alves");
-        pessoa.setCursoDesejado("Android");
-        pessoa.setNumeroTelefone("11-93215-8866");
-
-        outraPessoa.setPrimeiroNome("Daiany");
-        outraPessoa.setSobreNome("Alves");
-        outraPessoa.setCursoDesejado("Kotilin");
-        outraPessoa.setNumeroTelefone("11-93215-0000");
-
+        pessoa.setPrimeiroNome(preferences.getString("primeiroNome",""));
+        pessoa.setSobreNome(preferences.getString("Sobrenome",""));
+        pessoa.setCursoDesejado(preferences.getString("CursoDesejado",""));
+        pessoa.setNumeroTelefone(preferences.getString("Numtelefone",""));
 
         // associando class editText e button ao MainActivity.java
         editTextPrimeiroNome = findViewById(R.id.editTextPrimeiroNome);
@@ -110,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
                 listaVip.putString("Sobrenome", pessoa.getSobreNome());
                 listaVip.putString("CursoDesejado", pessoa.getCursoDesejado());
                 listaVip.putString("Numtelefone", pessoa.getNumeroTelefone());
-                listaVip.putString("TodosDados", outraPessoa.toString());
+
                 //salvando no arquivo
                 listaVip.apply();
 
@@ -119,6 +109,5 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Log.i("POOAndroid", pessoa.toString());
-        Log.i("POOAndroid", outraPessoa.toString());
     }
 }
