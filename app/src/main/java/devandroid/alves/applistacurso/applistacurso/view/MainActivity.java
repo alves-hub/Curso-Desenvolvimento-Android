@@ -19,6 +19,7 @@ import devandroid.alves.applistacurso.applistacurso.model.Pessoa;
 public class MainActivity extends AppCompatActivity {
 
     SharedPreferences preferences;
+    SharedPreferences.Editor listaVip;
     //atributo para salvar o Nome
     public static final String NAME_PREFERENCES = "pref_listaVip";
     PessoaController controller;
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         //Estancia objeto SharedPreferences passando nome criado e 0 = leitura e escrita.
         preferences = getSharedPreferences(NAME_PREFERENCES,0);
         //Criando arquivo tendo nome da lista "listaVip e associa ao arquivo no caso "preferences"
-        SharedPreferences.Editor listaVip = preferences.edit();
+        listaVip = preferences.edit();
 
         pessoa = new Pessoa();
         controller = new PessoaController();
@@ -74,6 +75,9 @@ public class MainActivity extends AppCompatActivity {
                 editTextSobrenome.setText("");
                 editTextNomeCursoDesejado.setText("");
                 editTextTelefoneDeContato.setText("");
+
+                listaVip.clear();
+                listaVip.apply();
 
             }
         });
