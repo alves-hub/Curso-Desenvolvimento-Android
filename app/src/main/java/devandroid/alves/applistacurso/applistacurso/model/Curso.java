@@ -2,5 +2,16 @@ package devandroid.alves.applistacurso.applistacurso.model;
 
 public class Curso {
 
-    public  Curso(){}
+    private String cursoDesejado;
+
+    public Curso(String nomeCursoDesejado) {
+        this.cursoDesejado = nomeCursoDesejado;
+    }
+
+    public String getCursoDesejado() {
+        return cursoDesejado;
+    }
+    public void setCursoDesejado(String cursoDesejado) {
+        this.cursoDesejado = cursoDesejado;
+    }
 }

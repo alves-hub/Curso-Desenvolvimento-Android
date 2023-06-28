@@ -2,16 +2,17 @@ package devandroid.alves.applistacurso.applistacurso.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import android.widget.Toolbar;
+
+import java.util.List;
 
 import devandroid.alves.applistacurso.R;
+import devandroid.alves.applistacurso.applistacurso.controller.CursoController;
 import devandroid.alves.applistacurso.applistacurso.controller.PessoaController;
 import devandroid.alves.applistacurso.applistacurso.model.Curso;
 import devandroid.alves.applistacurso.applistacurso.model.Pessoa;
@@ -19,6 +20,8 @@ import devandroid.alves.applistacurso.applistacurso.model.Pessoa;
 public class MainActivity extends AppCompatActivity {
 
     PessoaController controller;
+    CursoController cursoController;
+    List <String> listaCurso;
     Pessoa pessoa;
     EditText editTextPrimeiroNome;
     EditText editTextSobrenome;
@@ -32,6 +35,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        cursoController = new CursoController();
+        listaCurso = cursoController.dadosParaSpinner();
+
 
 
         controller = new PessoaController(MainActivity.this);
