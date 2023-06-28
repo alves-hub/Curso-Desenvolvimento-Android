@@ -105,7 +105,7 @@
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="353dp"
-        android:layout_height="37dp"
+        android:layout_height="48dp"
         app:layout_constraintBottom_toTopOf="@+id/btnFinalizar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

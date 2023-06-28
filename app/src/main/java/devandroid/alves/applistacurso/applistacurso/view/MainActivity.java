@@ -5,8 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
 import android.widget.Toast;
 
 import java.util.List;
@@ -30,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnLimpar;
     Button btnSalvar;
     Button btnFinalizar;
+    Spinner spinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         editTextSobrenome = findViewById(R.id.editTextSobrenome);
         editTextNomeCursoDesejado = findViewById(R.id.editTextNomeCursoDesejado);
         editTextTelefoneDeContato = findViewById(R.id.editTextTelefoneDeContato);
+        spinner = findViewById(R.id.spinner);
 
         btnLimpar = findViewById(R.id.btnLimpar);
         btnFinalizar = findViewById(R.id.btnFinalizar);
@@ -61,6 +66,19 @@ public class MainActivity extends AppCompatActivity {
         editTextSobrenome.setText(pessoa.getSobreNome());
         editTextNomeCursoDesejado.setText(pessoa.getCursoDesejado());
         editTextTelefoneDeContato.setText(pessoa.getNumeroTelefone());
+
+        // inserido dados no combo
+
+        //Adapter
+        //Layout
+        //Injetar adapter ao Spinner - a Lista será gerada
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,
+                cursoController.dadosParaSpinner());
+        adapter.setDropDownViewResource(android.R.layout.simple_list_item_1);
+        spinner.setAdapter(adapter);
+
+
 
         // acao dos botoes das telas
         btnLimpar.setOnClickListener(new View.OnClickListener() {
