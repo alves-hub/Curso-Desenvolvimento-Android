@@ -10,5 +10,6 @@
     <string name="txt_name">Name</string>
     <string name="nome_do_curso_desejado">Nome do Curso Desejado</string>
     <string name="telefone_de_contato">Telefone de contato</string>
+    <string name="txt_selecione_um_curso">Selecione um curso...</string>
 
 </resources>
